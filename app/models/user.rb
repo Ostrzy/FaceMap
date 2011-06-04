@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
       user.uid = uid
       user.name = user_data['name']
       user.location = user_data['location']['name']
-      user.picture = user_data['image']
+      user.picture = user_data['image'].gsub(/square/, 'normal')
     end
   end
 end
