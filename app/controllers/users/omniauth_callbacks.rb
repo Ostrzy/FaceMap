@@ -1,7 +1,7 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def facebook
     auth = request.env['omniauth.auth']
-    render auth.to_yaml
+    render :json => auth.to_json
     #@user = User.find_for_omniauth(auth['uid'], auth['provider'], auth['extra']['user_hash'])
 
     #if @user.persisted?
