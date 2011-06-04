@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
       user.uid = uid
       user.name = user_data['name']
       user.location = user_data['location']['name']
-      user.picture = auth['image'].gsub(/square/, 'normal')
+      user.picture = auth['user_info']['image'].gsub(/square/, 'normal')
     end
   end
 end
