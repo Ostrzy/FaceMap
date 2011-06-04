@@ -19,7 +19,7 @@ function addMarkerFromAddress(map, address) {
     } else {
       alert("Nie udało się znaleźć lokalizacji z następujących powodów: " + status);
     }
-  }
+  });
 }
 
 window.onload = initialize;
