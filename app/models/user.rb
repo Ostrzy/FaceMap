@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :uid, :provider
 
-  def find_for_omniauth uid, provider, user_data
+  def self.find_for_omniauth uid, provider, user_data
     User.find_by_provider_and_uid(provider, uid) || User.create do |user|
       user.provider = provider
       user.uid = uid
