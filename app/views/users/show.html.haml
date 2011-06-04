@@ -1,3 +1,4 @@
 =image_tag current_user.picture
-%p= current_user.name
-%p= current_user.location
+%p#name= current_user.name
+%p#location= current_user.location
+#map_canvas{:style => "height:500px; width:500px"}
