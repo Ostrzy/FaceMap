@@ -8,7 +8,7 @@ function initialize() {
 }
 
 function addMarkerFromAddress(map, address) {
-  var geocoder - google.maps.Geocoder();
+  var geocoder = google.maps.Geocoder();
   geocoder.geocode( { 'address': address }, function(results, status) {
     if(status == google.maps.GeocoderStatus.OK) {
       map.setCenter(results[0].geometry.location);
