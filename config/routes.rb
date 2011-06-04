@@ -1,9 +1,14 @@
 FaceMaps::Application.routes.draw do
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  root :to => 'users/auth/facebook'
+  root :to => 'sessions#new'
 
+  devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks' } do
+    get 'sign_in', :to => 'users/sessions#new', :as => :new_user_session
+    get 'sign_out', :to => 'users/sessions#destroy', :as => :destroy_user_session
+  end
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
@@ -49,11 +54,11 @@ FaceMaps::Application.routes.draw do
   #     resources :products
   #   end
 
-  # You can have the root of your site routed with "root"
+  # You can have the root of your site routed with 'root'
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  # root :to => 'welcome#index'
 
-  # See how all your routes lay out with "rake routes"
+  # See how all your routes lay out with 'rake routes'
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
