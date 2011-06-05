@@ -1,5 +1,6 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  invitation: We hope you will
+  invitation_link: visit us again!
+  location: Location
+  log_failure: An unexpected error has occured during signing in. Please try again.
+  name: Name
