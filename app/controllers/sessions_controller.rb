@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
   def new
     if current_user
-      render 'user/show'
+      render 'users/show'
     else
       redirect_to user_omniauth_authorize_path(:facebook)
     end
