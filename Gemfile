@@ -9,6 +9,7 @@ gem 'rake', '0.8.7'
 gem 'mysql2', '< 0.3'
 gem 'devise'
 gem 'haml-rails'
+gem 'haml'
 gem "oa-oauth", :require => "omniauth/oauth"
 
 # Use unicorn as the web server
