@@ -1,6 +1,9 @@
 =image_tag current_user.picture, :id => 'picture'
-%p#name= t(:name) + ': ' + current_user.name
+%p#name
+  %strong= t(:name)
+  = ': ' + current_user.name
 %p
-  = t(:location) + ': '
+  %strong= t(:location) + ': '
   %span#location= current_user.location
+= link_to t(:sign_out), destroy_user_session(current_user)
 #map_canvas

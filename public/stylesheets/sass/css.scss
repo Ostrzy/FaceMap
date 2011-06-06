@@ -4,8 +4,10 @@ body {
   background-color: #CCCCCC;
 }
 
-p {
+p, a {
   margin: 0px;
+  font-size: 13pt;
+  font-family: Verdana, Arial, Helvetica;
 }
 
 #name {
