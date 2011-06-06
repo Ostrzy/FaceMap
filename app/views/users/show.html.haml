@@ -1,4 +1,4 @@
-=image_tag current_user.picture
+=image_tag current_user.picture, :id => 'picture'
 %p#name= t(:name) + ': ' + current_user.name
 %p#location= t(:location) + ': ' + current_user.location
 #map_canvas{ :style => "height:500px; width:500px" }
