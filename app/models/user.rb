@@ -4,11 +4,13 @@ class User < ActiveRecord::Base
   devise :omniauthable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :uid, :provider
+  attr_accessible :name, :location
 
-  def self.find_for_omniauth uid, provider, auth
+  def self.find_for_omniauth auth
     user_data = auth['extra']['user_hash']
-    User.find_by_provider_and_uid(provider, uid) || User.create do |user|
+    uid = auth['uid']
+    provider = auth['provider']
+    (user = User.find_by_provider_and_uid(provider, uid) && user.update_attributes(:name => user_data['name'], :location => user_data['location'])) || User.create do |user|
       user.provider = provider
       user.uid = uid
       user.name = user_data['name']
