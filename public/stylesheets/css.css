@@ -1,7 +1,8 @@
 p {
   margin: 0px; }
-  p #name {
-    padding: 10px; }
+
+#name {
+  padding: 10px; }
 
 #picture {
   float: left;
