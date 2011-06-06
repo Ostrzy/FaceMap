@@ -1,0 +1,14 @@
+p {
+  margin: 0px; }
+  p #name {
+    padding: 10px; }
+
+#picture {
+  float: left;
+  margin: 10px; }
+
+#map_canvas {
+  height: 500px;
+  width: 500px;
+  margin: 10px;
+  clear: left; }
