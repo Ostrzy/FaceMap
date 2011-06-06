@@ -5,4 +5,5 @@
 %p
   %strong= t(:location) + ': '
   %span#location= current_user.location
+= link_to t(:sign_out), destroy_user_session
 #map_canvas
