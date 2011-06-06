@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     user_data = auth['extra']['user_hash']
     uid = auth['uid']
     provider = auth['provider']
-    (user = User.find_by_provider_and_uid(provider, uid) && user.update_attributes(:name => user_data['name'], :location => user_data['location'])) || User.create do |user|
+    (user = User.find_by_provider_and_uid(provider, uid) && user.update_attributes(:name => user_data['name'], :location => user_data['location']['name'])) || User.create do |user|
       user.provider = provider
       user.uid = uid
       user.name = user_data['name']

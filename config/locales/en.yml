@@ -4,4 +4,5 @@ en:
   location: Location
   log_failure: An unexpected error has occured during signing in. Please try again.
   name: Name
+  refresh_data: Refresh data
   sign_out: Sign out

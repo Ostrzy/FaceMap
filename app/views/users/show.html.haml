@@ -6,4 +6,5 @@
   %strong= t(:location)
   %span#location= ': ' + current_user.location
 = link_to t(:sign_out), destroy_user_session_path
+= link_to t(:refresh_data), user_omniauth_authorize_path(:facebook)
 #map_canvas
