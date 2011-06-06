@@ -6,12 +6,13 @@ body {
 
 p, a {
   margin: 0px;
+  padding-bottom: $general_distance;
   font-size: 13pt;
   font-family: Verdana, Arial, Helvetica;
 }
 
 #name {
-  padding: $general_distance;
+  padding-top: $general_distance;
 }
 
 #picture {

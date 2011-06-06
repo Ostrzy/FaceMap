@@ -3,7 +3,7 @@
   %strong= t(:name)
   = ': ' + current_user.name
 %p
-  %strong= t(:location) + ': '
-  %span#location= current_user.location
-= link_to t(:sign_out), destroy_user_session_path
+  %strong= t(:location)
+  %span#location= ': ' + current_user.location
+%p link_to t(:sign_out), destroy_user_session_path
 #map_canvas

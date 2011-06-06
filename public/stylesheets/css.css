@@ -3,11 +3,12 @@ body {
 
 p, a {
   margin: 0px;
+  padding-bottom: 10px;
   font-size: 13pt;
   font-family: Verdana, Arial, Helvetica; }
 
 #name {
-  padding: 10px; }
+  padding-top: 10px; }
 
 #picture {
   float: left;
