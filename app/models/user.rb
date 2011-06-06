@@ -10,14 +10,17 @@ class User < ActiveRecord::Base
     user_data = auth['extra']['user_hash']
     uid = auth['uid']
     provider = auth['provider']
-    unless user = User.find_by_provider_and_uid(provider, uid)
-      user = User.new
-      user.provider = provider
-      user.uid = uid
-      user.picture = auth['user_info']['image'].gsub(/square/, 'large')
+    if user = User.find_by_provider_and_uid(provider, uid)
+      user.update_attributes(:name => user_data['name'], :location => user_data['location']['name'])
+      user
+    else
+      User.create do |user|
+        user.provider = provider
+        user.uid = uid
+        user.name = user_data['name']
+        user.location = user_data['location']['name']
+        user.picture = auth['user_info']['image'].gsub(/square/, 'large')
+      end
     end
-    user.name = user_data['name']
-    user.location = user_data['location']['name']
-    user.save
   end
 end
