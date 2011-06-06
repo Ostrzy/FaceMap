@@ -17,7 +17,7 @@ function addMarkerFromAddress(map, address) {
         position: results[0].geometry.location
       });
     } else {
-      alert("Nie udało się znaleźć lokalizacji z następujących powodów: " + status);
+      alert("Geocoding failed becouse of: " + status);
     }
   });
 }
