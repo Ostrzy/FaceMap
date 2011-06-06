@@ -1,11 +1,18 @@
 body {
-  background-color: #9999CC; }
-
-p, a {
-  margin: 0px;
-  padding-bottom: 10px;
+  background-color: #CCCCCC;
   font-size: 13pt;
   font-family: Verdana, Arial, Helvetica; }
+
+p, a {
+  display: block;
+  margin: 0px;
+  padding-bottom: 10px; }
+
+.notice {
+  color: green; }
+
+.alert {
+  color: red; }
 
 #name {
   padding-top: 10px; }

@@ -1,14 +1,23 @@
 $general_distance: 10px;
 
 body {
-  background-color: #9999CC;
+  background-color: #CCCCCC;
+  font-size: 13pt;
+  font-family: Verdana, Arial, Helvetica;
 }
 
 p, a {
+  display: block;
   margin: 0px;
   padding-bottom: $general_distance;
-  font-size: 13pt;
-  font-family: Verdana, Arial, Helvetica;
+}
+
+.notice {
+  color: green;
+}
+
+.alert {
+  color: red;
 }
 
 #name {
