@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   def self.find_for_omniauth auth
     user_data = auth['extra']['user_hash']
     if user = User.find_by_provider_and_uid(auth['provider'], auth['uid'])
-      [user, user.update_attributes(:name => user_data['name'], :location => user_data['location']['name'])]
+      [user, user.update_attributes(:name => user_data['name'], :location => user_data['location'].try(:[], 'name')]
     else
       User.create do |user|
         user.provider = auth['provider']
