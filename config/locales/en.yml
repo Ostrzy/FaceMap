@@ -6,3 +6,4 @@ en:
   name: Name
   refresh_data: Refresh data
   sign_out: Sign out
+  update_failure: Update of your name and location has failed.

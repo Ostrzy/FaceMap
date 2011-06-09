@@ -1,10 +1,10 @@
 =image_tag current_user.picture, :id => 'picture'
 %p#name
-  %strong= t(:name)
-  = ': ' + current_user.name
+  %strong= t(:name) + ': '
+  = current_user.name
 %p
-  %strong= t(:location)
-  %span#location= ': ' + current_user.location
+  %strong= t(:location) + ': '
+  %span#location= current_user.location
 = link_to t(:refresh_data), user_omniauth_authorize_path(:facebook)
 = link_to t(:sign_out), destroy_user_session_path
 #map_canvas
